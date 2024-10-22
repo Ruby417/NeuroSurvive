@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Signup - NeuroSurvive</title>
+    <!-- Include Poppins font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Poppins font to the entire page */
+        body, .navbar-brand, .nav-link, .form-container, h2, form input, form button, p {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        .nav-link {
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        .custom-bg-red {
+            background-color: rgb(198, 210, 199) !important; /* Override any existing background color */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light custom-bg-red">
+        <a class="navbar-brand" href="{{ url_for('index') }}">NEUROSURVIVE</a>
+        <ul class="navbar-nav">
+            {% if session.get('logged_in') %}
+                <li><a class="nav-link" href="{{ url_for('about') }}">About Us</a></li>
+                <li><a class="nav-link" href="{{ url_for('index') }}">Predict</a></li>
+                <li><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+                <li class="nav-link"><a href="{{ url_for('login') }}">Login</a></li>
+                <li class="nav-link"><a href="{{ url_for('signup') }}">Signup</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2>Signup</h2>
+        <form method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a>.</p>
+    </div>
+    <footer class="footer">
+        <hr class="footer-line">
+        <p class="footer-text">NEUROSURVIVE</p>
+    </footer>
+</body>
+</html>

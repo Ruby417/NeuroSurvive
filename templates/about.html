@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NeuroSurvive</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .about-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 800;
+            color:#ffffff !important;
+        }
+        
+
+        .nav-link {
+            font-size: 25px;
+            font-weight: 700;
+            color:#ffffff !important;
+        }
+        .navbar {
+        height: 100px; /* Adjust the height to make the navbar bigger */
+        padding: 25px 20px; /* Increase the padding for more space inside the navbar */
+        }
+
+        .about-image {
+            width: 100%; /* Adjusts to the column size */
+            max-width: 100%; /* Ensures image doesn't exceed container width */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 10px;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+        .container {
+            padding: 0 15px;
+        }
+
+        .text-container {
+            margin-bottom: 30px;
+        }
+
+        .img-container {
+            margin-bottom: 30px;
+        }
+
+        .about-content p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #666;
+            text-align: justify; /* Added for justification */
+        }
+
+        .about-content h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .custom-bg-red {
+            background-color: rgb(198, 210, 199) !important; /* Override any existing background color */
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgb(198, 210, 199); /* Optional: match this with your page background color */
+        }
+
+        .footer-line {
+            border: none;
+            border-top: 1px solid #ddd; /* Thin line color and width */
+            margin: 0;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .footer-text {
+            margin: 0;
+            font-size: 18px;
+            color: #ffffff; /* Text color */
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light custom-bg-red">
+        <a class="navbar-brand" href="{{ url_for('index') }}">NEUROSURVIVE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Predict</a>
+                </li>
+                {% if session.get('logged_in') %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('signup') }}">Signup</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-container">
+                    <h1>About NeuroSurvive</h1>
+                    <p>NeuroService is a cutting-edge web platform designed to predict brain tumor survival times with remarkable accuracy. Leveraging advanced machine learning models, NeuroService learns from diverse datasets to provide precise predictions about patient survival times. This tool is invaluable for patients, caregivers, and medical professionals who seek reliable insights into the progression of brain tumors, aiding in better decision-making and planning.</p>
+                </div>
+                <div class="col-md-6 img-container">
+                    <img src="{{ url_for('static', filename='Images/brain1.jpg') }}" alt="Brain Tumor" class="about-image">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 text-container">
+                    <p>The prediction model on NeuroService takes into account various critical factors associated with brain tumor patients, including the patient's unique ID, age at diagnosis, and gender, all of which can influence treatment outcomes. It also considers the type of tumor diagnosed, such as glioblastoma, meningioma, or astrocytoma, as well as the tumor grade, which indicates its severity (ranging from Grade I to Grade IV). The tumor's location within the brain, whether in the frontal lobe, temporal lobe, or other areas, is another crucial element. Additionally, the model evaluates the type of treatment received by the patient, such as surgery, chemotherapy, or radiation therapy, and the treatment outcome, whether it resulted in a complete response, partial response, stable disease, or progressive disease. Other factors include the time elapsed between the initial treatment and tumor recurrence, known as the time to recurrence, and the location of the tumor's recurrence within the brain.</p>
+                </div>
+                <div class="col-md-6 img-container">
+                    <img src="{{ url_for('static', filename='Images/brain 7.jpg') }}" alt="Technology" class="about-image">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 text-container">
+                    <p>Most predictions made by NeuroService are remarkably accurate, providing users with reliable information that closely reflects real-world outcomes. The platform's primary mission is to help people understand more about brain tumors and their progression, offering them valuable time to plan and spend with their loved ones. NeuroService is dedicated to supporting patients and their families, ensuring they can make informed decisions about their care and cherish the time they have together. At NeuroSurvive, we are committed to supporting patients through every step of their journey. Our goal is to provide the tools and information needed to make informed decisions about treatment and care.</p>
+                </div>
+                <div class="col-md-6 img-container">
+                    <img src="{{ url_for('static', filename='Images/brain 6.jpg') }}" alt="Support" class="about-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <footer class="footer">
+        <hr class="footer-line">
+        <p class="footer-text">NEUROSURVIVE</p>
+    </footer>
+    
+</body>
+</html>
