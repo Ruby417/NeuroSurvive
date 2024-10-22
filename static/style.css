@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa; /* Light grey background */
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+.bg-light{
+
+    background-color: #0056b3;
+}
+h1 {
+    color: #007bff; /* Blue color for header */
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.btn-primary {
+    background-color: rgb(198, 210, 199);
+    border-color: rgb(198, 210, 199);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Alert Styles */
+.alert {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgb(198, 210, 199); /* Darker blue for a more sophisticated look */
+    padding: 30px;/* Increased padding for a larger navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    width: 100%;
+    position: fixed; /* Fix navbar to the top */
+    top: 0;
+    left: 0;
+}
+
+.navbar-brand {
+    font-size: 40px; /* Larger font size for better visibility */
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-nav li {
+    margin-left: 30px; /* Increased spacing between items */
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px; /* Larger font size for better readability */
+}
+
+.navbar-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px; /* Adjusted padding for smaller screens */
+    }
+
+    .navbar-brand {
+        font-size: 28px; /* Adjusted font size for smaller screens */
+    }
+
+    .navbar-nav a {
+        font-size: 18px; /* Adjusted font size for smaller screens */
+    }
+}
+
+
+/* Form Container Styling */
+.form-container {
+    background: #fff;
+    padding: 30px; /* Increased padding for a more spacious feel */
+    margin: 20px auto; /* Center the container */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    max-width: 600px; /* Increased width */
+    width: 90%; /* Responsive width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside the form container */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px; /* Larger heading size */
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    margin-bottom: 20px; /* Increased margin for spacing */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(198, 210, 199); /* Darker blue for consistency */
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px; /* Larger font size for readability */
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #dff0d8; /* Even darker blue for hover effect */
+    color: #3C763D;
+}
+
+/* Flash Messages Styling */
+.flash-messages {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.flash-messages p {
+    margin: 0;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(198, 210, 199); /* Optional: match this with your page background color */
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Thin line color and width */
+    margin: 0;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff; /* Text color */
+    font-weight: 600;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+
