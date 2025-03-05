@@ -4,7 +4,20 @@
 
 ### Web Interface
 
-#### Signup 
+#### Signup Page
 ![NeuroSurvive Signup Page](https://github.com/Ruby417/NeuroSurvive/blob/main/NeuroSurvive%20Output/signup.jpg)
 
+#### Login Page
+![NeuroSurvive Signup Page](https://github.com/Ruby417/NeuroSurvive/blob/main/NeuroSurvive%20Output/login.jpg)
 
+#### About Us Page
+![NeuroSurvive Signup Page](https://github.com/Ruby417/NeuroSurvive/blob/main/NeuroSurvive%20Output/about%20us.jpg)
+
+![NeuroSurvive Signup Page](https://github.com/Ruby417/NeuroSurvive/blob/main/NeuroSurvive%20Output/about%20us%201.jpg)
+
+#### Prediction
+![NeuroSurvive Signup Page](https://github.com/Ruby417/NeuroSurvive/blob/main/NeuroSurvive%20Output/prediction%201.jpg)
+
+![NeuroSurvive Signup Page](https://github.com/Ruby417/NeuroSurvive/blob/main/NeuroSurvive%20Output/prediction%202.jpg)
+
+![NeuroSurvive Signup Page](https://github.com/Ruby417/NeuroSurvive/blob/main/NeuroSurvive%20Output/prediction%203.jpg)
